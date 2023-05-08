@@ -129,6 +129,42 @@ $(document).ready(function()
             pincode_error="";
             $('#pincode_error').html('');
         }
+        if(fname_error !='' || lname_error !='' || email_error !='' || phone_error !='' || address1_error !='' || address2_error !='' || city_error !='' || state_error !='' || country_error !='' || pincode_error !='')
+        {
+            return false;
+        }
+        else{
+            
+            var data={
+                'firstname':firstname,
+                'lastname':lastname,
+                'email':email,
+                'phone':phone,
+                'address1':address1,
+                'address2':address2,
+                'city':city,
+                'state':state,
+                'country':country,
+                'pincode':pincode,
+        
+
+            }
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+ 
+                method:"POST",
+                url:'/proceed-to-pay',
+                data:data,
+                success:function(response){
+        
+                  alert(response.total_price)
+                }
+               });
+        }
         
     })
 })

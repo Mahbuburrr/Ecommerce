@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Rating;
+use App\Models\Review;
+use Illuminate\Support\Facades\Auth;
+
 
 class FrontController extends Controller
 {
@@ -45,7 +49,20 @@ class FrontController extends Controller
             {
 
                 $product=Product::where('slug',$prod_slug)->first();
-                return view('frontend.products.view',compact('product'));
+                $rating=Rating::where('prod_id',$product->id)->get();
+                $rating_sum=Rating::where('prod_id',$product->id)->sum('stars_rated');
+                $user_rating=Rating::where('prod_id',$product->id)->where('user_id',Auth::id())->first();
+                $reviews=Review::where('prod_id',$product->id)->get();
+                if($rating->count() > 0)
+                {
+                $rating_value=$rating_sum/$rating->count();
+                    
+                }
+                else{
+                $rating_value=0;
+
+                }
+                return view('frontend.products.view',compact('product','rating','reviews','rating_value','user_rating'));
             }
             else{
 
@@ -68,7 +85,19 @@ class FrontController extends Controller
             {
 
                 $product=Product::where('slug',$prod_slug)->first();
-                return view('frontend.products.view',compact('product'));
+                $rating=Rating::where('prod_id',$product->id)->get();
+                $rating_sum=Rating::where('prod_id',$product->id)->sum('stars_rated');
+                $user_rating=Rating::where('prod_id',$product->id)->where('user_id',Auth::id())->first();
+                if($rating->count() > 0)
+                {
+                $rating_value=$rating_sum/$rating->count();
+                    
+                }
+                else{
+                $rating_value=0;
+
+                }
+                return view('frontend.products.view',compact('product','rating','rating_value','user_rating'));
             }
             else{
 
