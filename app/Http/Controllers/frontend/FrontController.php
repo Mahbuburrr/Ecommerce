@@ -88,6 +88,7 @@ class FrontController extends Controller
                 $rating=Rating::where('prod_id',$product->id)->get();
                 $rating_sum=Rating::where('prod_id',$product->id)->sum('stars_rated');
                 $user_rating=Rating::where('prod_id',$product->id)->where('user_id',Auth::id())->first();
+                $reviews=Review::where('prod_id',$product->id)->get();
                 if($rating->count() > 0)
                 {
                 $rating_value=$rating_sum/$rating->count();
@@ -97,7 +98,7 @@ class FrontController extends Controller
                 $rating_value=0;
 
                 }
-                return view('frontend.products.view',compact('product','rating','rating_value','user_rating'));
+                return view('frontend.products.view',compact('product','rating','rating_value','user_rating','reviews'));
             }
             else{
 
@@ -107,6 +108,38 @@ class FrontController extends Controller
       
 
         
+    }
+    public function productlist()
+    {
+
+        $product=Product::select('name')->where('status','0')->get();
+        $data=[];
+        foreach($product as $item){
+            $data[]=$item['name'];
+        }
+        return $data;
+    }
+    public function searchproduct(Request $request)
+    {
+
+        $searched_product=$request->prodcut_name;
+        if($searched_product != "")
+        {
+            $product=Product::where("name","LIKE","%$searched_product%")->first();
+            if($product)
+            {
+                return redirect('category/'.$product->category->slug.'/'.$product->slug);
+            }
+            else{
+                return redirect()->back()->with('status',"No products matched your secarch");
+            }
+        }
+        else{
+
+            return redirect()->back();
+        }
+
+
     }
 
     

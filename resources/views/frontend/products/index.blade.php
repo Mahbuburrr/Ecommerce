@@ -20,17 +20,17 @@
             <h2>{{$category->name}}</h2>
 
                 @foreach($products as $product )
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3  mt-3">
                         <a href="{{url('category/'.$category->slug.'/'.$product->slug)}}">
-                        <div class="card">
-                            <img src="{{asset('assets/uploads/products/'.$product->image)}}" alt="product-image">
-                                <div class="card-body">
-                                    <h5>{{$product->name}}</h5>
-                                    <span class=""float-start>{{$product->selling_price}}</span>
-                                    <span class="float-end"><s>{{$product->original_price}}</s></span>
-                                </div>
+                            <div class="card">
+                                <img src="{{asset('assets/uploads/products/'.$product->image)}}" alt="product-image">
+                                    <div class="card-body">
+                                        <h5>{{$product->name}}</h5>
+                                        <span class=""float-start>{{$product->selling_price}}</span>
+                                        <span class="float-end"><s>{{$product->original_price}}</s></span>
+                                    </div>
                             </div>
-</a>
+                        </a>
                         </div>
                     
                     @endforeach

@@ -56,3 +56,17 @@
 
   color:#ffd900;
 }
+.search_bar{
+  width: 40%;
+  margin-left:5% ;
+}
+.ui-menu{
+
+  z-index: 3500 !important;
+}
+.whatsapp-chat{
+
+  bottom: 10px;
+  left: 10px;
+  position: fixed;
+}

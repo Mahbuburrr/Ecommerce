@@ -34,6 +34,8 @@ Route::get('/',[FrontController::class,'index']);
 
 
 Route::get('/category',[FrontController::class,'category']);
+Route::get('/product-list',[FrontController::class,'productlist']);
+Route::post('/searchproduct',[FrontController::class,'searchproduct']);
 Route::get('/view-category/{slug}',[FrontController::class,'viewcategory']);
 Route::get('/category/{cate_slug}/{prod_slug}',[FrontController::class,'productview']);
 Route::get('/category/{prod_slug}',[FrontController::class,'view']);

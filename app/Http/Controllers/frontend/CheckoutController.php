@@ -19,13 +19,14 @@ class CheckoutController extends Controller
         foreach($old_cartitems as $item)
         {
 
-            if(!Product::where('id',$item->prod_id)->where('qty','>=',$item->prod_qty)->exists())
+            if(!Product::where('id',$item->prod_id)->where("qty",">=",$item->prod_qty)->exists())
            {
             $removeItems=Cart::where('user_id',Auth::id())->where('prod_id',$item->prod_id)->first();
             $removeItems->delete();
            }
           
         }
+       
         $cartitems=Cart::where('user_id',Auth::id())->get();
         return view('frontend.checkout',compact('cartitems'));
     } 
@@ -64,9 +65,9 @@ class CheckoutController extends Controller
                 'qty'=>$item->prod_qty,
                 'price'=>$item->products->selling_price
             ]);
-            $product=Product::where('id',$item->prod_id)->first();
-            $prod_qty=$product->qty - $item->prod_qty;
-            $product->update();
+            $prod=Product::where('id',$item->prod_id)->first();
+            $prod->qty=$prod->qty - $item->prod_qty;
+            $prod->update();
 
            
         }
