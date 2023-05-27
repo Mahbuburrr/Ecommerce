@@ -10,9 +10,30 @@ Welcome to E-Shop
 <div class="py-5">
     <div class="container">
         <div class="row">
-            <h2>Featured Products</h2>
+        <h2>Featured Products</h2>
+        <div class="owl-carousel owl-theme">
 
-        @foreach($featured_products as $product )
+            @foreach($featured_products as $product )
+                    <div class="item">
+                    <a href="{{url('category/'.$product->slug)}}">
+                        <div class="card">
+                            <img src="{{asset('assets/uploads/products/'.$product->image)}}" alt="product-image">
+                                <div class="card-body">
+                                    <h5>{{$product->name}}</h5>
+                                    <span class=""float-start>{{$product->selling_price}}</span>
+                                    <span class="float-end"><s>{{$product->original_price}}</s></span>
+                                </div>
+
+                        </div>
+                        </a>
+                    </div>
+                
+            @endforeach
+    
+        </div>
+            
+
+        <!-- @foreach($featured_products as $product )
             <div class="col-md-3 mt-3">
             <a href="{{url('category/'.$product->slug)}}">
                 <div class="card">
@@ -27,7 +48,7 @@ Welcome to E-Shop
                 </a>
             </div>
             
-            @endforeach
+        @endforeach -->
     </div>
 </div>
 
@@ -58,4 +79,28 @@ Welcome to E-Shop
     </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+</script>
+
 @endsection

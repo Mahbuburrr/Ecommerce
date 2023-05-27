@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2023 at 08:47 AM
+-- Generation Time: May 27, 2023 at 08:22 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -41,8 +41,8 @@ CREATE TABLE `carts` (
 --
 
 INSERT INTO `carts` (`id`, `user_id`, `prod_id`, `prod_qty`, `created_at`, `updated_at`) VALUES
-(29, '2', '2', '1', '2023-05-03 02:29:57', '2023-05-03 02:29:57'),
-(30, '2', '1', '1', '2023-05-03 03:02:40', '2023-05-03 03:02:40');
+(13, '1', '1', '3', '2023-05-26 23:59:14', '2023-05-26 23:59:14'),
+(14, '1', '4', '1', '2023-05-27 00:00:28', '2023-05-27 00:09:28');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `description`, `status`, `popular`, `image`, `meta_title`, `meta_description`, `meta_keywords`, `created_at`, `updated_at`) VALUES
-(1, 'SmartPhone', 'electronics', 'arqtyte fiyt ghjuyi78t9', 0, 1, '1682673273.png', 'sfgsy jipiuop;k aaertgb', 'xdfgsdg vbjhjg dgfsd gnhdf', 'zsrfgtjhg ujkiuiulogj zdsfa b xghftgh xcvn hg', '2023-04-28 03:14:33', '2023-04-28 03:14:33');
+(1, 'SmartPhone', 'electronics', 'arqtyte fiyt ghjuyi78t9', 0, 1, '1682673273.png', 'sfgsy jipiuop;k aaertgb', 'xdfgsdg vbjhjg dgfsd gnhdf', 'zsrfgtjhg ujkiuiulogj zdsfa b xghftgh xcvn hg', '2023-04-28 03:14:33', '2023-04-28 03:14:33'),
+(2, 'Earphone', 'earphone', 'asdfahtr  tryershsg dfghdsg', 0, 1, '1684815483.jpg', 'dghdh', 'dhdhd', 'dr', '2023-05-22 22:18:03', '2023-05-22 22:18:03');
 
 -- --------------------------------------------------------
 
@@ -117,7 +118,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2023_04_23_102816_create_order_items_table', 1),
 (11, '2023_04_28_141640_create_wishlists_table', 2),
 (12, '2023_05_05_051553_create_ratings_table', 3),
-(13, '2023_05_07_064035_create_reviews_table', 4);
+(14, '2023_05_07_064035_create_reviews_table', 4);
 
 -- --------------------------------------------------------
 
@@ -150,8 +151,16 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `fname`, `lname`, `phone`, `address1`, `address2`, `city`, `state`, `country`, `pincode`, `total_price`, `status`, `message`, `tracking_no`, `created_at`, `updated_at`) VALUES
-(1, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '16000', 0, NULL, 'mahbubur2780', '2023-05-05 08:39:59', '2023-05-05 08:39:59'),
-(2, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur2883', '2023-05-05 10:49:11', '2023-05-05 10:49:11');
+(1, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '16000', 1, NULL, 'mahbubur2780', '2023-05-05 08:39:59', '2023-05-19 03:31:41'),
+(2, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur2883', '2023-05-05 10:49:11', '2023-05-05 10:49:11'),
+(3, '2', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur9407', '2023-05-08 11:30:08', '2023-05-08 11:30:08'),
+(4, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur6687', '2023-05-20 13:47:42', '2023-05-20 13:47:42'),
+(5, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur2773', '2023-05-20 13:53:49', '2023-05-20 13:53:49'),
+(6, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur3019', '2023-05-20 14:01:56', '2023-05-20 14:01:56'),
+(7, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur4802', '2023-05-20 14:42:30', '2023-05-20 14:42:30'),
+(8, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur2066', '2023-05-20 14:44:05', '2023-05-20 14:44:05'),
+(9, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '32000', 0, NULL, 'mahbubur5384', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
+(10, '2', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '16000', 0, NULL, 'mahbubur8275', '2023-05-21 00:00:41', '2023-05-21 00:00:41');
 
 -- --------------------------------------------------------
 
@@ -175,7 +184,16 @@ CREATE TABLE `order_items` (
 
 INSERT INTO `order_items` (`id`, `order_id`, `prod_id`, `qty`, `price`, `created_at`, `updated_at`) VALUES
 (1, '1', '3', '1', '16000', '2023-05-05 08:39:59', '2023-05-05 08:39:59'),
-(2, '2', '1', '1', '15000', '2023-05-05 10:49:11', '2023-05-05 10:49:11');
+(2, '2', '1', '1', '15000', '2023-05-05 10:49:11', '2023-05-05 10:49:11'),
+(3, '3', '1', '1', '15000', '2023-05-08 11:30:08', '2023-05-08 11:30:08'),
+(4, '4', '1', '1', '15000', '2023-05-20 13:47:42', '2023-05-20 13:47:42'),
+(5, '5', '1', '1', '15000', '2023-05-20 13:53:49', '2023-05-20 13:53:49'),
+(6, '6', '1', '1', '15000', '2023-05-20 14:01:56', '2023-05-20 14:01:56'),
+(7, '7', '1', '1', '15000', '2023-05-20 14:42:30', '2023-05-20 14:42:30'),
+(8, '8', '1', '1', '15000', '2023-05-20 14:44:05', '2023-05-20 14:44:05'),
+(9, '9', '2', '3', '16000', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
+(10, '9', '3', '2', '16000', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
+(11, '10', '2', '4', '16000', '2023-05-21 00:00:41', '2023-05-21 00:00:41');
 
 -- --------------------------------------------------------
 
@@ -252,9 +270,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `cate_id`, `name`, `slug`, `small_description`, `description`, `original_price`, `selling_price`, `image`, `qty`, `tax`, `status`, `trending`, `meta_title`, `meta_keywords`, `meta_description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'redmi 7 pro', 'electronics', 'asdf amar sonar bangla ami tomai valobashi', 'very nice Outlook asdfatn rtywrufd', '16000', '15000', '1682673392.png', '12', '34', 0, 1, 'aatreyu muy uyettye', 'safasm eteye dfsrt', 'aqwerw dtruyry afsafge fxzsdtr', '2023-04-28 03:16:32', '2023-04-28 03:16:32'),
-(2, 1, 'redmi11', 'electro', 'asdf mrey', 'dfsrt jur7uy', '18000', '16000', '1682673950.png', '12', '34', 0, 1, 'sy ryt', 'sgfry df', '\"syt hgf uyirtuy88', '2023-04-28 03:25:50', '2023-04-28 09:47:11'),
-(3, 1, 'Earphone', 'earphone', 'aa', 'aad', '18000', '16000', '1683297078.png', '12', '34', 0, 1, 'gorgious', 'aa', 'adfa', '2023-05-05 08:31:18', '2023-05-05 08:31:18');
+(1, 1, 'redmi 7 pro', 'electronics', 'asdf amar sonar bangla ami tomai valobashi', 'very nice Outlook asdfatn rtywrufd', '16000', '15000', '1682673392.png', '2', '34', 0, 1, 'aatreyu muy uyettye', 'safasm eteye dfsrt', '\"\"\"aqwerw dtruyry afsafge fxzsdtr', '2023-04-28 03:16:32', '2023-05-22 11:01:07'),
+(2, 1, 'redmi11', 'electro', 'asdf mrey', 'dfsrt jur7uy', '18000', '16000', '1682673950.png', '5', '34', 0, 1, 'sy ryt', 'sgfry df', '\"syt hgf uyirtuy88', '2023-04-28 03:25:50', '2023-05-21 00:00:41'),
+(3, 1, 'Earphone', 'earphone', 'aa', 'aad', '18000', '16000', '1683297078.png', '10', '34', 0, 1, 'gorgious', 'aa', 'adfa', '2023-05-05 08:31:18', '2023-05-20 15:09:13'),
+(4, 2, 'Earphone2', 'earphone2', 'adfadfa', 'afdadf', '700', '550', '1684815586.png', '12', '23', 0, 1, 'ddas', 'sfgsf', '\"sdfgsfgs', '2023-05-22 22:19:46', '2023-05-22 23:46:47'),
+(5, 2, 'Earphone3', 'earphone3', 'asdfad', 'asfas', '660', '560', '1684815655.jpg', '12', '23', 0, 1, 'asdfgs', 'sdfgsg', '\"\"dghdghd', '2023-05-22 22:20:55', '2023-05-22 23:46:58');
 
 -- --------------------------------------------------------
 
@@ -276,7 +296,7 @@ CREATE TABLE `ratings` (
 --
 
 INSERT INTO `ratings` (`id`, `user_id`, `prod_id`, `stars_rated`, `created_at`, `updated_at`) VALUES
-(1, '2', '1', '2', '2023-05-05 04:19:07', '2023-05-05 08:21:55'),
+(1, '2', '1', '3', '2023-05-05 04:19:07', '2023-05-08 11:46:34'),
 (2, '2', '2', '4', '2023-05-05 04:20:06', '2023-05-05 08:12:57'),
 (3, '2', '2', '4', '2022-08-04 15:47:59', '2022-08-03 15:47:59'),
 (4, '1', '3', '4', '2023-05-05 08:40:19', '2023-05-05 10:44:40'),
@@ -292,10 +312,19 @@ CREATE TABLE `reviews` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` varchar(191) NOT NULL,
   `prod_id` varchar(191) NOT NULL,
-  `user_review` varchar(191) NOT NULL,
+  `user_review` mediumtext NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `user_id`, `prod_id`, `user_review`, `created_at`, `updated_at`) VALUES
+(1, '1', '1', 'This product was good and delivery was on time .This product was good and delivery was on time .This product was good and delivery was on time .This product was good and delivery was on time .This product was good and delivery was on time .I think that is very good service for all types of..', '2023-05-07 07:56:37', '2023-05-08 11:14:53'),
+(2, '1', '3', 'This product is very nice.This sound is so smooth that is very enjoyable.', '2023-05-08 11:16:27', '2023-05-08 11:16:27'),
+(3, '2', '1', 'This product is very good.it is so precious and luxerious .its quality is also very impresive.', '2023-05-08 11:31:43', '2023-05-08 11:31:43');
 
 -- --------------------------------------------------------
 
@@ -351,9 +380,7 @@ CREATE TABLE `wishlists` (
 
 INSERT INTO `wishlists` (`id`, `user_id`, `prod_id`, `created_at`, `updated_at`) VALUES
 (6, '1', '2', '2023-04-28 10:35:17', '2023-04-28 10:35:17'),
-(7, '1', '1', '2023-04-28 10:35:55', '2023-04-28 10:35:55'),
-(8, '2', '2', '2023-04-30 11:25:25', '2023-04-30 11:25:25'),
-(10, '2', '1', '2023-04-30 23:05:33', '2023-04-30 23:05:33');
+(7, '1', '1', '2023-04-28 10:35:55', '2023-04-28 10:35:55');
 
 --
 -- Indexes for dumped tables
@@ -455,13 +482,13 @@ ALTER TABLE `wishlists`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -473,19 +500,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -497,7 +524,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ratings`
@@ -509,7 +536,7 @@ ALTER TABLE `ratings`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -521,7 +548,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wishlists`
 --
 ALTER TABLE `wishlists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
