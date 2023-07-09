@@ -67,7 +67,7 @@
     <div class=" product_data">
         <div class="">
             <div class="row">
-                <div class="col-md-4 border-right">
+                <div class="col-md-4  border-right">
                     <img src="{{asset('assets/uploads/products/'.$product->image)}}" class="w-100" alt="">
                 </div>
                 <div class="col-md-8">

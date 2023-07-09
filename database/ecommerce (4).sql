@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2023 at 08:22 AM
+-- Generation Time: Jul 09, 2023 at 12:55 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -41,8 +41,7 @@ CREATE TABLE `carts` (
 --
 
 INSERT INTO `carts` (`id`, `user_id`, `prod_id`, `prod_qty`, `created_at`, `updated_at`) VALUES
-(13, '1', '1', '3', '2023-05-26 23:59:14', '2023-05-26 23:59:14'),
-(14, '1', '4', '1', '2023-05-27 00:00:28', '2023-05-27 00:09:28');
+(111, '2', '2', '1', '2023-07-02 01:25:04', '2023-07-02 01:25:04');
 
 -- --------------------------------------------------------
 
@@ -71,7 +70,7 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `description`, `status`, `popular`, `image`, `meta_title`, `meta_description`, `meta_keywords`, `created_at`, `updated_at`) VALUES
 (1, 'SmartPhone', 'electronics', 'arqtyte fiyt ghjuyi78t9', 0, 1, '1682673273.png', 'sfgsy jipiuop;k aaertgb', 'xdfgsdg vbjhjg dgfsd gnhdf', 'zsrfgtjhg ujkiuiulogj zdsfa b xghftgh xcvn hg', '2023-04-28 03:14:33', '2023-04-28 03:14:33'),
-(2, 'Earphone', 'earphone', 'asdfahtr  tryershsg dfghdsg', 0, 1, '1684815483.jpg', 'dghdh', 'dhdhd', 'dr', '2023-05-22 22:18:03', '2023-05-22 22:18:03');
+(3, 'Earphone', 'earphone', 'asdfsafrg dasfgsfg ghdghfgh s dfg', 0, 1, '1685201370.png', 'dasfa asdfretyy ghioyolt eqr vgfg ghjhgkuizvx erhte ty', 'afdatre asdfasfda tsgyer dyertyhdfhg gfhsfgsd', 'adsdfasdf asdfaasdfasfasterwqttr dfghdjhfui   asfdasdfaf    dsfaafadfa   fhjdfhuyyt', '2023-05-27 09:29:30', '2023-05-27 11:50:01');
 
 -- --------------------------------------------------------
 
@@ -160,7 +159,8 @@ INSERT INTO `orders` (`id`, `user_id`, `fname`, `lname`, `phone`, `address1`, `a
 (7, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur4802', '2023-05-20 14:42:30', '2023-05-20 14:42:30'),
 (8, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '15000', 0, NULL, 'mahbubur2066', '2023-05-20 14:44:05', '2023-05-20 14:44:05'),
 (9, '1', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '32000', 0, NULL, 'mahbubur5384', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
-(10, '2', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '16000', 0, NULL, 'mahbubur8275', '2023-05-21 00:00:41', '2023-05-21 00:00:41');
+(10, '2', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '16000', 0, NULL, 'mahbubur8275', '2023-05-21 00:00:41', '2023-05-21 00:00:41'),
+(11, '2', 'Mahbubur', 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', '31000', 0, NULL, 'mahbubur2301', '2023-06-30 11:32:04', '2023-06-30 11:32:04');
 
 -- --------------------------------------------------------
 
@@ -193,7 +193,9 @@ INSERT INTO `order_items` (`id`, `order_id`, `prod_id`, `qty`, `price`, `created
 (8, '8', '1', '1', '15000', '2023-05-20 14:44:05', '2023-05-20 14:44:05'),
 (9, '9', '2', '3', '16000', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
 (10, '9', '3', '2', '16000', '2023-05-20 15:09:13', '2023-05-20 15:09:13'),
-(11, '10', '2', '4', '16000', '2023-05-21 00:00:41', '2023-05-21 00:00:41');
+(11, '10', '2', '4', '16000', '2023-05-21 00:00:41', '2023-05-21 00:00:41'),
+(12, '11', '1', '3', '15000', '2023-06-30 11:32:04', '2023-06-30 11:32:04'),
+(13, '11', '2', '4', '16000', '2023-06-30 11:32:04', '2023-06-30 11:32:04');
 
 -- --------------------------------------------------------
 
@@ -270,11 +272,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `cate_id`, `name`, `slug`, `small_description`, `description`, `original_price`, `selling_price`, `image`, `qty`, `tax`, `status`, `trending`, `meta_title`, `meta_keywords`, `meta_description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'redmi 7 pro', 'electronics', 'asdf amar sonar bangla ami tomai valobashi', 'very nice Outlook asdfatn rtywrufd', '16000', '15000', '1682673392.png', '2', '34', 0, 1, 'aatreyu muy uyettye', 'safasm eteye dfsrt', '\"\"\"aqwerw dtruyry afsafge fxzsdtr', '2023-04-28 03:16:32', '2023-05-22 11:01:07'),
-(2, 1, 'redmi11', 'electro', 'asdf mrey', 'dfsrt jur7uy', '18000', '16000', '1682673950.png', '5', '34', 0, 1, 'sy ryt', 'sgfry df', '\"syt hgf uyirtuy88', '2023-04-28 03:25:50', '2023-05-21 00:00:41'),
-(3, 1, 'Earphone', 'earphone', 'aa', 'aad', '18000', '16000', '1683297078.png', '10', '34', 0, 1, 'gorgious', 'aa', 'adfa', '2023-05-05 08:31:18', '2023-05-20 15:09:13'),
-(4, 2, 'Earphone2', 'earphone2', 'adfadfa', 'afdadf', '700', '550', '1684815586.png', '12', '23', 0, 1, 'ddas', 'sfgsf', '\"sdfgsfgs', '2023-05-22 22:19:46', '2023-05-22 23:46:47'),
-(5, 2, 'Earphone3', 'earphone3', 'asdfad', 'asfas', '660', '560', '1684815655.jpg', '12', '23', 0, 1, 'asdfgs', 'sdfgsg', '\"\"dghdghd', '2023-05-22 22:20:55', '2023-05-22 23:46:58');
+(1, 1, 'redmi 7 pro', 'electronics', 'asdf amar sonar bangla ami tomai valobashi', 'very nice Outlook asdfatn rtywrufd', '16000', '15000', '1682673392.png', '1', '34', 0, 1, 'aatreyu muy uyettye', 'safasm eteye dfsrt', '\"\"\"aqwerw dtruyry afsafge fxzsdtr', '2023-04-28 03:16:32', '2023-06-30 11:32:04'),
+(2, 1, 'redmi11', 'electro', 'asdf mrey', 'dfsrt jur7uy', '18000', '16000', '1685210062.png', '1', '34', 0, 1, 'sy ryt', 'sgfry df', '\"\"\"\"\"syt hgf uyirtuy88', '2023-04-28 03:25:50', '2023-06-30 11:32:04'),
+(6, 3, 'es5', 'earphone1', 'afdadfdsafd  asdfadf', 'asdfafd dfasfas asdfda', '1800', '454', '1685201629.png', '12', '23', 0, 1, 'asdadf asdfadfa fgytyf sdfgs', 'sfdgs sgtyhrty asdfa dfgsd', '\"sdtret nfghytyh jhktyu earera', '2023-05-27 09:33:49', '2023-05-27 11:56:30');
 
 -- --------------------------------------------------------
 
@@ -339,14 +339,14 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(191) NOT NULL,
   `role_as` tinyint(4) NOT NULL DEFAULT 0,
-  `lname` varchar(191) NOT NULL,
-  `phone` varchar(191) NOT NULL,
-  `address1` varchar(191) NOT NULL,
-  `address2` varchar(191) NOT NULL,
-  `city` varchar(191) NOT NULL,
-  `state` varchar(191) NOT NULL,
-  `country` varchar(191) NOT NULL,
-  `pincode` varchar(191) NOT NULL,
+  `lname` varchar(191) DEFAULT NULL,
+  `phone` varchar(191) DEFAULT NULL,
+  `address1` varchar(191) DEFAULT NULL,
+  `address2` varchar(191) DEFAULT NULL,
+  `city` varchar(191) DEFAULT NULL,
+  `state` varchar(191) DEFAULT NULL,
+  `country` varchar(191) DEFAULT NULL,
+  `pincode` varchar(191) DEFAULT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -358,7 +358,12 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role_as`, `lname`, `phone`, `address1`, `address2`, `city`, `state`, `country`, `pincode`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Mahbubur', 'mahbuburcse191@gmail.com', NULL, '$2y$10$VGCyrHR4kc8fB/oLelQKeOqE6DlH3ZGwT1Rp9DewQJRFVGQEBvrX2', 1, 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', NULL, '2023-04-28 03:11:36', '2023-04-28 04:36:25'),
-(2, 'Mahbubur', 'mahbuburrh5@gmail.com', NULL, '$2y$10$AFbpx6b1Ij0n7lKBvTQxXODV2D3Z31KJ.5s9T8cyvfz.CCDI8eRfu', 0, 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', NULL, '2023-04-28 03:17:13', '2023-04-28 03:20:55');
+(2, 'Mahbubur', 'mahbuburrh5@gmail.com', NULL, '$2y$10$AFbpx6b1Ij0n7lKBvTQxXODV2D3Z31KJ.5s9T8cyvfz.CCDI8eRfu', 0, 'Rahman', '01609558069', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'vill:Alampur,post :kazipur,district :Sirajgonj', 'dhaka', 'Bangladesh', 'Bangladesh', '6310', NULL, '2023-04-28 03:17:13', '2023-04-28 03:20:55'),
+(3, 'Mahbubur Rahman', 'u@gmail.com', NULL, '$2y$10$ma6rmmnvlGt0hUNp/3IaluW3OONDGi8.OPQLiXlJ75Ff5zNtjePfO', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-02 01:36:16', '2023-07-02 01:36:16'),
+(4, 'Rakib', 'noyon@gmail.com', NULL, '$2y$10$z4pXbJ.T.U.7LPZYTSIgGuFgwKJK6G0Oh4X3oCdqgf7rIdkiWfoEO', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-02 01:37:08', '2023-07-02 01:37:08'),
+(5, 'Rony', 'user2@gmail.com', NULL, '$2y$10$kcRk6y2qDbr6CD1NoaIQKuPxW/a0NLvz9WmATJKGv/Rggg.YZuy7q', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-02 01:38:12', '2023-07-02 01:38:12'),
+(6, 'Habib', 'habib@gmail.com', NULL, '$2y$10$inN6j9BRq4cCvSGKIhEid.uzXnuz0qSdKL9OoQKx47Mu5racCJw/y', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-02 01:50:27', '2023-07-02 01:50:27'),
+(7, 'Raju', 'raju@gmail.com', NULL, '$2y$10$Pd7NPtvsU.fvF6/NnDxQt.ikEg9KFOc1i5OW0PTZQnxc2w4sqIDIa', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-02 11:15:41', '2023-07-02 11:15:41');
 
 -- --------------------------------------------------------
 
@@ -482,13 +487,13 @@ ALTER TABLE `wishlists`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -506,13 +511,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -524,7 +529,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ratings`
@@ -542,7 +547,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `wishlists`

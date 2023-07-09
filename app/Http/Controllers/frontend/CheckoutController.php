@@ -16,22 +16,21 @@ class CheckoutController extends Controller
     public function checkout(){
        
         $old_cartitems=Cart::where('user_id',Auth::id())->get();
-        
+
         foreach($old_cartitems as $item)
         {
 
-            if(!Product::where('id',$item->prod_id)->where('qty','>=',$item->prod_qty)->exists())
+            if(!Product::where('id',$item->prod_id)->where('qty','>=',$item->prod_qty)->exists() )
            {
             $removeItems=Cart::where('user_id',Auth::id())->where('prod_id',$item->prod_id)->first();
-            //
-            //$removeItems->delete();
-            echo "comes";
+            $removeItems->delete();
+          
            }
           
         }
        
-        // $cartitems=Cart::where('user_id',Auth::id())->get();
-        // return view('frontend.checkout',compact('cartitems'));
+        $cartitems=Cart::where('user_id',Auth::id())->get();
+        return view('frontend.checkout',compact('cartitems'));
     } 
     public function placeorder(Request $request)
     {
