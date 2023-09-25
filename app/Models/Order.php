@@ -14,7 +14,7 @@ class Order extends Model
 
         'user_id',
         'fname',
-        'lname',
+        
         'phone',
         'address1',
         'address2',

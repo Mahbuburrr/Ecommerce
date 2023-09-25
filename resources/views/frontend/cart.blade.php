@@ -21,7 +21,7 @@ My Cart
 </div>
 
 <div class="container my-5">
-    <div class="card shadow cartitems">
+    <div class="card shadow cartitems ">
         @if($cartitems->count() > 0)
         <div class="card-body">
             @php $total=0; @endphp
@@ -61,7 +61,7 @@ My Cart
         </div>
         <div class="card-footer">
             <h6>Total Price {{$total}}
-           <a href="{{url('checkout')}}"> <button class="btn btn-outline-success float-end">
+           <a href="{{url('checkout')}}"> <button class="btn btn-outline-success  float-end">
 
             Proceed to Checkout
             </button></a>

@@ -22,6 +22,7 @@ class CheckoutController extends Controller
 
             if(!Product::where('id',$item->prod_id)->where('qty','>=',$item->prod_qty)->exists() )
            {
+            
             $removeItems=Cart::where('user_id',Auth::id())->where('prod_id',$item->prod_id)->first();
             $removeItems->delete();
           
@@ -29,16 +30,16 @@ class CheckoutController extends Controller
           
         }
        
-        $cartitems=Cart::where('user_id',Auth::id())->get();
-        return view('frontend.checkout',compact('cartitems'));
-    } 
+       
+       $cartitems=Cart::where('user_id',Auth::id())->get();
+       return view('frontend.checkout',compact('cartitems'));
+}
     public function placeorder(Request $request)
     {
 
         $order=new Order();
         $order->user_id=Auth::id();
         $order->fname=$request->input('fname');
-        $order->lname=$request->input('lname');
         $order->phone=$request->input('phone');
         $order->address1=$request->input('address1');
         $order->address2=$request->input('address2');
@@ -74,19 +75,19 @@ class CheckoutController extends Controller
            
         }
         
-        if(Auth::user()->address1 == NULL)
+        if(Auth::user()->fname == NULL)
         {
 
             $user=User::where('id',Auth::id())->first();
             $user->name=$request->input('fname');
-            $user->lname=$request->input('lname');
-            $user->phone=$request->input('phone');
-            $user->address1=$request->input('address1');
-            $user->address2=$request->input('address2');
-            $user->city=$request->input('city');
-            $user->state=$request->input('state');
-            $user->country=$request->input('country');
-            $user->pincode=$request->input('pincode');
+            
+            // $user->phone=$request->input('phone');
+            // $user->address1=$request->input('address1');
+            // $user->address2=$request->input('address2');
+            // $user->city=$request->input('city');
+            // $user->state=$request->input('state');
+            // $user->country=$request->input('country');
+            // $user->pincode=$request->input('pincode');
             $user->update();
         }
 
@@ -105,7 +106,6 @@ class CheckoutController extends Controller
             $total_price += $item->products->selling_price * $item->prod_qty;
         }
        $firstname=$request->input('firstname');
-        $lastname=$request->input('lastname');
         $email=$request->input('email');
         $phone=$request->input('phone');
         $address1=$request->input('address1');

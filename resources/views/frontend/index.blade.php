@@ -21,7 +21,7 @@ Welcome to E-Shop
                                 <div class="card-body">
                                     <h5>{{$product->name}}</h5>
                                     <span class=""float-start>{{$product->selling_price}}</span>
-                                    <span class="float-end"><s>{{$product->original_price}}</s></span>
+                                    <span class="float-end price"><s>{{$product->original_price}}</s></span>
                                 </div>
 
                         </div>
@@ -59,7 +59,7 @@ Welcome to E-Shop
         <h2>Trending Categories</h2>
             <div class="row">
             @foreach($trending_category as $category )
-            <div class="col-md-3 mt-3">
+            <div class="col-md-3  mt-3">
                 <a href="{{url('view-category/'.$category->slug)}}">
                 <div class="card">
                     <img src="{{asset('assets/uploads/category/'.$category->image)}}" alt="product-image">

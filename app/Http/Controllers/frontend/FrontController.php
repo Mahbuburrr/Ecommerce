@@ -19,6 +19,9 @@ class FrontController extends Controller
         return view('frontend.index',compact('featured_products','trending_category'));
     }
 
+   
+    
+
     public function category(){
 
         $category=Category::where('status','0')->get();

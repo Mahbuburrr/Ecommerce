@@ -70,3 +70,32 @@
   left: 10px;
   position: fixed;
 }
+
+
+
+@media screen and (max-width:560px) {
+  /* .item{
+    width: 300px;
+  }
+   */
+   .card{
+    width: 270px;    
+    height: 270px;
+    margin: auto; 
+    flex-direction: column;
+    
+}
+.card-body{
+  display: inline-block;
+  padding: 1rem;
+  height: 300px;
+ 
+  font-size: 12px;
+}
+
+
+img{
+  height: 200px;
+  width: 100;
+}
+}
